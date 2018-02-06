@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Own Adventure</title>
+</head>
+
+<body>
+<h1>Choose Your Own Adventure!</h1>
+    <script>
+        
+//Player Information
+        var playerInfo = {
+            playerName:"",
+            playerLocation:"",
+        }
+        
+        playerInfo.playerName = prompt("Please state your name, traveler:");
+        playerInfo.playerLocation = prompt("Where are you coming from?");
+        Start();
+        
+//Game Start
+        function Start(playerName, playerLocation){
+            var startGame = confirm(`Welcome, ${playerName} of ${playerLocation}. Are you ready to begin your adventure?`);
+            
+            if(startGame){
+                Street();   
+            }
+            else{
+                alert("Never mind, then.");
+            }
+        }
+
+//Kids
+        function Street(){
+             var beginAdv = prompt("When walking down the street one day, a basketball rolls past you before hitting the curb and coming to a stop. Some kids from across the street shout to you asking for their ball back. Do you leave it, pass it, or shoot it?");
+            
+            if(beginAdv == "pass it" || beginAdv == "pass"){
+                var pass = prompt("You pick up the ball and heave an overhead pass to the closest kid. Unfortunately, the 4th grader didn't see the pass coming, and the ball hits the back of his head, causing him to fall face first into the gravel of the makeshift court. What's worse is that a police officer making his rounds observed your act of malice. He jumps out of his car and attempts to detain you. Do you fight back or go peacefully?");
+                    if(pass == "fight back" || pass == "fight"){
+                        Mexico();
+                    }
+                    else if(pass == "go" || pass == "go peacefully" || pass == "peacefully"){
+                        Prison();
+                    }
+                    else if (pass == null){
+                        alert("Come again!");
+                    }
+                    else{
+                        alert(`${pass} isn't an option, ${playerName}`);
+                    }
+            }
+            else if(beginAdv == "shoot it" || beginAdv == "shoot"){
+                var shoot = prompt("You are overcome with a very odd feeling. You've never played basketball in your life, but suddenly you feel the urge to shoot the ball, even though you are more than a street away from the hoop! You follow your gut feeling, pick up the ball, and with perfect form, the ball goes through the hoop, hitting nothing but net. You stand in shock as the kids on the nearby court shout in astonishment. Suddenly, you feel a tap on your shoulder, and turn around to face a very important looking man. 'Hello, sir. I am a scout for the Oklahoma City Thunder. I was wondering if you had a few seconds to talk?");
+            }
+            else if(beginAdv == "leave it" || beginAdv == "leave"){
+                alert("You glance at the basketball, but having never played in your life, decide not to risk making a fool of yourself. You walk into your appartment and continue your favorite activity - eating peanut butter. You are a loser.");
+                Restart();
+            }
+            else if(beginAdv == null){
+                alert("Come again!");
+            }
+            else{
+                alert(beginAdv + " isn't an option, ");
+                Street();
+            }
+        }
+        
+        function Mexico(){
+            prompt("As the cop is reaching for his handcuffs, you uppercut him, knocking him to the ground. While he's in a daze, you sprint in the other direction, listening to him call for backup on his walkie talkie as you continue running. You know that you will surely be arrested if you ever go back, so you get in a cab and tell the driver to drive south. After a while, the driver taps you on the shoulder, saying, 'sir, we cannot drive any further.' You had fallen asleep, and ended up in Southern Mexico. You thank the driver, pay him, and step out of the cab. You look around and see a tavern, a hotel, a shop, and a basketball court. Where do you go?");
+        }
+        
+        function Prison(){
+            prompt("You hold your hands out and allow the offier to place the handcuffs on your arms, and lead you into the vehicle. You are driven to the nearby jail and led into the courtyard where other prisoners are performing various activities. The guards give you your new uniform, and leave you in the courtyard. You can go to the basketball court, the card table, the workout bench, or your cell.");
+        }
+        
+        
+        function Restart(){
+            var tryAgain = confirm("Would you like to play again?");
+            
+            if(tryAgain){
+                Street();
+            }
+            else{
+                alert("Come again!");
+            }
+            
+        }
+    </script>
+</body>
+</html>
