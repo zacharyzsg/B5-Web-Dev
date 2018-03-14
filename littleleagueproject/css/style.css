@@ -1,12 +1,10 @@
-.teamName{
-display: inline;
+.topRow{
+    display: grid;
+    grid-template-columns: 50px 1fr 140px 80px 1fr 50px 1fr 
+    /* position: relative; */
 }
-.homeAway{
-display: inline;
-}
-.opponentName{
-display: inline;
-}
-.fieldName{
-display: inline;
+
+.bottomRow{
+    display: inline;
+    position: relative;
 }
