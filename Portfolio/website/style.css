@@ -1,15 +1,10 @@
-.pitt {
-    
-    float: left;
-    width: 150px;
-    margin-left: 10px;
-    margin-right: 15px;
+body{
+    background-color: #2a00ff;
+    color: #ff7c19;
 }
 
-hr{
-    height: 2px;
-    color: black;
-    background-color: black;
+header{
+    background-color: #0db209;
 }
 
 .pageHeading{
@@ -21,68 +16,144 @@ hr{
 
 .pageSub{
     margin-top: 0px;
-    padding-bottom: 125px;
+    padding-bottom: 100px;
     color: black;
 }
 
-.menu{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+@media only screen and (max-width: 600px){
+    header{
+        height: 425px;
+    }
+    .menu{
+        list-style-type: none;
+        padding: 8px;
+    }
+
+    hr{
+    height: 0px;
+    color: #0db209;
+    background-color: blue;
 }
+    
+    .menu li a{
+        display: block;
+        float: left;
+        width: 100%;
+        font-weight: 600;
+        padding: 8px 2px;
+        margin-bottom: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid black;
+        border-radius: 8px;
+    }
 
-
-.menu li a{
+    .menu li a:hover{
+        color: black;
+    }
+    
+    .row img{
+        margin-top: 25px;
+        margin-left: 100px;
+    }
+    
+    .navy{
+        width: 250px;
+        margin-left: 25px;
+    }
+    
+    .lany{
+        margin-left: 200px;
+    }
+    
+    .williams {
+    
     float: left;
-    color: black;
-    font-size: 25px;
-    padding: 25px;
-    text-decoration: none;
-    border-right: 2px solid black;
+    height: 200px;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 15px;
 }
 
-.menu li a:hover{
-    color: black;
+    
 }
 
-.contactList{
-    margin: 25px;
-    width: 300px;
-    height: 250px;
+
+
+@media only screen and (min-width: 601px){
+    
+    .menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .menu li a{
+        float: left;
+        font-size: 25px;
+        padding: 25px;
+        text-decoration: none;
+        border-right: 2px solid black;
+    }
+
+    .menu li a:hover{
+        color: black;
+    }
+    
+    hr{
+    height: 1px;
+    color: blue;
+    background-color: blue;
+}
+    
+    .navy{
+    float: right;
+    height: 400px;
+    margin-right: 25px;
+    margin-top: 25px;
+    width: auto;
+}
+    
+    .williams {
+    
+    float: left;
+    height: 200px;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 15px;
+    padding: 7px;
 }
 
-.cyoa1{
-    margin: 25px;
-    width: 325px;
-    height: 225px;
+    .lany{
+        margin-left: 400px;
+        height: 300px;
+    }
+    
 }
 
-.cyoa2{
-    margin: 25px;
-    width: 325px;
-    height: 225px;
+.row img {
+    width: 350px;
+    height: 300px;
 }
 
-.SBWhome{
-    margin: 25px;
-    width: 250px;
-    height: 250px;
+.row {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100vmin;
+    grid-row-gap: 16px;
+    margin: 0 auto;
 }
 
-.SBWabout{
-    margin: 25px;
-    width: 250px;
-    height: 250px;
+.message{
+    width: 400px;
+    height: 200px;
 }
 
-.SBWproduct{
-    margin: 25px;
-    width: 250px;
-    height: 250px;
-}
-
-.SBWcontact{
-    margin: 25px;
-    width: 250px;
-    height: 250px;
+.submit{
+    margin: 15px 15px 5px 0px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
 }
